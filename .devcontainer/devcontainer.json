@@ -5,7 +5,7 @@
     "image": "docker.io/bosschaert/rde_dc:3",
 
     // "postCreateCommand": "mvn install",
-    "postCreateCommand": "/bin/bash -c \"aio config set -j ims.contexts.aio-cli-plugin-cloudmanager <<< $AEM_CM_INTEGRATION\" && aio config:set cloudmanager_orgid $AEM_CM_ORG_ID && aio config:set cloudmanager_programid $AEM_CM_PROGRAM_ID && aio config:set cloudmanager_environmentid $AEM_CM_ENV_ID",
+    "postCreateCommand": "/bin/bash -c \"aio config set -j ims.contexts.aio-cli-plugin-cloudmanager <<< '$AEM_CM_INTEGRATION'\" && aio config:set cloudmanager_orgid $AEM_CM_ORG_ID && aio config:set cloudmanager_programid $AEM_CM_PROGRAM_ID && aio config:set cloudmanager_environmentid $AEM_CM_ENV_ID",
 
     // Configure tool-specific properties.
     "customizations": {
