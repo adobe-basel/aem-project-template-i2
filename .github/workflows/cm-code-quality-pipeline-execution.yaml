@@ -14,7 +14,7 @@ jobs:
       - name: Push GitHub branch to Cloud Manager git repository
         uses: wei/git-sync@v3
         with:
-          source_repo: ${{ github.action_repository }}
+          source_repo: ${{ github.repository }}
           source_branch: "refs/remotes/source/*"
           destination_repo: "https://${{ env.cm_git_username }}:${{ env.cm_git_password }}@${{ env.cm_git_url }}"
           destination_branch: "refs/heads/*"
@@ -27,7 +27,7 @@ jobs:
       - name: Get or Create Cloud Manager Pipeline
         run: echo "Checking for existing Cloud Manager Pipeline for branch..."
       - name: Create Cloud Manager Pipeline Execution
-        uses: adobe-basel/aio-cloudmanager-pipeline-action@v0.0.7
+        uses: adobe-basel/aio-cloudmanager-pipeline-action@v0.0.8
         env:
           AIO_CLI_ENV: prod
           LOG_LEVEL: debug
