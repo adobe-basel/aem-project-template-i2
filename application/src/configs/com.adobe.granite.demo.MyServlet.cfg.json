@@ -1,4 +1,4 @@
 {
-    "background": "palegreen",
+    "background": "",
     "osgi.http.whiteboard.servlet.pattern": "/mysite.html"
 }
