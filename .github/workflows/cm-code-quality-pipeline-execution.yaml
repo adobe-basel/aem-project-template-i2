@@ -31,7 +31,7 @@ jobs:
     timeout-minutes: 90
     steps:
       - name: Cloud Manager Pipeline Execution
-        uses: adobe-basel/aio-cloudmanager-pipeline-action@v0.0.11
+        uses: adobe-basel/aio-cloudmanager-pipeline-action@v0.0.12
         env:
           AIO_CLI_ENV: prod
           # LOG_LEVEL: debug

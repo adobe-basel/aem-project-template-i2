@@ -55,7 +55,7 @@ public class LoggingFilter implements Filter {
                 .getRequestPathInfo().getResourcePath(), slingRequest
                 .getRequestPathInfo().getSelectorString());
 
-        filterChain.doFilter(request, response);
+        chain.doFilter(request, response);
     }
 
     @Override
