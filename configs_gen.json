@@ -1,0 +1,4 @@
+{"com.adobe.granite.demo.MyServlet": {
+    "background": "palegreen",
+    "osgi.http.whiteboard.servlet.pattern": "/mysite.html"
+}}
