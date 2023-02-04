@@ -30,8 +30,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
-      - shell: bash
-        run: echo {{ secrets.AEM_CM_INTEGRATION }}
+      - run: 'echo "$AEM_CM_INTEGRATION" | base64'
+        shell: bash
+        env:
+          AEM_CM_INTEGRATION: ${{ secrets.AEM_CM_INTEGRATION }}
       - name: Cloud Manager Pipeline Execution
         uses: adobe-basel/aio-cloudmanager-pipeline-action@v0.0.13
         env:
